@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import { TextInput } from "@mantine/core";
 import { Controller, useFormContext } from "react-hook-form";
-import { InputTextI } from "@r3dm4st3r/react-hook-form/types/index.type";
+import { InputTextProps } from "@r3dm4st3r/react-hook-form/types/index.type";
 
-const InputText: FC<InputTextI> = ({ name, label, props }) => {
+const InputText: FC<InputTextProps> = ({ name, label, props }) => {
   const { control } = useFormContext();
   if (!control) {
     throw new Error(
