@@ -11,6 +11,6 @@
     "react": "^18",
     "react-hook-form": "^7"
   },
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT"
 }

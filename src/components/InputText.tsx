@@ -5,6 +5,11 @@ import { InputTextI } from "@r3dm4st3r/react-hook-form/types/index.type";
 
 const InputText: FC<InputTextI> = ({ name, label, props }) => {
   const { control } = useFormContext();
+  if (!control) {
+    throw new Error(
+      "React Hook Form context not found. Make sure you are using components within a Form component.",
+    );
+  }
 
   return (
     <Controller
