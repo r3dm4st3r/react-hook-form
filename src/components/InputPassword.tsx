@@ -1,9 +1,10 @@
-import React, { FC } from "react";
-import { TextInput } from "@mantine/core";
+import React, { FC, useRef } from "react";
+import { PasswordInput } from "@mantine/core";
 import { Controller, useFormContext } from "react-hook-form";
-import { InputTextProps } from "@r3dm4st3r/react-hook-form/types/index.type";
+import { InputPasswordProps } from "@r3dm4st3r/react-hook-form/types/index.type";
 
-const InputText: FC<InputTextProps> = ({ name, label, props }) => {
+const InputPassword: FC<InputPasswordProps> = ({ name, label, props }) => {
+  const inputRef = useRef<HTMLInputElement>(null);
   const { control } = useFormContext();
 
   return (
@@ -11,12 +12,13 @@ const InputText: FC<InputTextProps> = ({ name, label, props }) => {
       control={control}
       name={name}
       render={({
-        field: { onChange, onBlur, value, ref },
+        field: { onChange, onBlur, value },
         fieldState: { error },
       }) => {
         return (
-          <TextInput
-            ref={ref}
+          <PasswordInput
+            ref={inputRef}
+            withAsterisk
             label={label}
             placeholder={
               props?.placeholder ? props?.placeholder : `Enter ${label}`
@@ -34,4 +36,4 @@ const InputText: FC<InputTextProps> = ({ name, label, props }) => {
   );
 };
 
-export default InputText;
+export default InputPassword;
