@@ -9,10 +9,6 @@
     "rootDir": "./",
     "typeRoots": ["./src/types"],
     "baseUrl": "./src",
-    "paths": {
-      "@r3dm4st3r/react-hook-form/*": ["*"]
-    },
-
     /* JavaScript Support */
     "allowJs": true,
     "checkJs": true,

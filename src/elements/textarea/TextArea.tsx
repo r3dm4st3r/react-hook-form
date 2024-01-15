@@ -1,7 +1,7 @@
 import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Textarea as MantineTextarea } from "@mantine/core";
-import { TextAreaProps } from "@r3dm4st3r/react-hook-form/types";
+import { TextAreaProps } from "../../types";
 
 const TextArea: React.FC<TextAreaProps> = ({
   name,

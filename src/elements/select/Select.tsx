@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Select as MantineSelect } from "@mantine/core";
-import { SelectProps } from "@r3dm4st3r/react-hook-form/types";
+import { SelectProps } from "../../types";
 
 const Select: FC<SelectProps> = ({ label, name, data, props }) => {
   const { control } = useFormContext();

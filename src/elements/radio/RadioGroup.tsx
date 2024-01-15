@@ -5,7 +5,7 @@ import {
   Radio as MantineRadio,
   RadioGroup as MantineRadioGroup,
 } from "@mantine/core";
-import { RadioGroupProps } from "@r3dm4st3r/react-hook-form/types";
+import { RadioGroupProps } from "../../types";
 
 const RadioGroup: FC<RadioGroupProps> = ({
   name,

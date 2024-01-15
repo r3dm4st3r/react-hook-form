@@ -1,7 +1,7 @@
 import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Switch as MantineSwitch } from "@mantine/core";
-import { SwitchProps } from "@r3dm4st3r/react-hook-form/types";
+import { SwitchProps } from "../../types";
 
 const Switch: React.FC<SwitchProps> = ({ name, label, props }) => {
   const { control } = useFormContext();

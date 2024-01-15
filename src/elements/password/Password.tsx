@@ -1,7 +1,7 @@
 import React, { FC, useRef } from "react";
 import { PasswordInput } from "@mantine/core";
 import { Controller, useFormContext } from "react-hook-form";
-import { PasswordProps } from "@r3dm4st3r/react-hook-form/types";
+import { PasswordProps } from "../../types";
 
 const Password: FC<PasswordProps> = ({ name, label, props }) => {
   const inputRef = useRef<HTMLInputElement>(null);
