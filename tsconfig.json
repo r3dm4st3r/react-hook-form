@@ -37,7 +37,7 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/elements/index.d.ts",
+    "src/index.d.ts",
     "src/types/index.d.ts"
   ],
   "exclude": ["node_modules"]

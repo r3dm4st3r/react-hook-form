@@ -48,15 +48,3 @@ interface SelectProps extends IBaseForm {
 interface CheckboxProps extends IBaseForm {
   props?: Partial<MantineCheckboxProps>;
 }
-
-export {
-  IBaseForm,
-  ILabelValue,
-  InputProps,
-  SelectProps,
-  SwitchProps,
-  RadioGroupProps,
-  CheckboxProps,
-  TextAreaProps,
-  PasswordProps,
-};
