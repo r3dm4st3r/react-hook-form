@@ -1,4 +1,4 @@
-export * from "../types/index";
+export * from "../types";
 export { default as Input } from "./input/Input";
 export { default as Checkbox } from "./checkbox/Checkbox";
 export { default as Password } from "./password/Password";
