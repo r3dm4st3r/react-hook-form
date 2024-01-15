@@ -1,9 +1,13 @@
 import React, { FC } from "react";
 import { Controller, useFormContext } from "react-hook-form";
-import { Group, Radio, RadioGroup } from "@mantine/core";
-import { InputRadioGroupProps } from "@r3dm4st3r/react-hook-form/types/index.type";
+import {
+  Group,
+  Radio as MantineRadio,
+  RadioGroup as MantineRadioGroup,
+} from "@mantine/core";
+import { RadioGroupProps } from "@r3dm4st3r/react-hook-form/types";
 
-const RadioGroupInput: FC<InputRadioGroupProps> = ({
+const RadioGroup: FC<RadioGroupProps> = ({
   name,
   label = "",
   props,
@@ -19,7 +23,7 @@ const RadioGroupInput: FC<InputRadioGroupProps> = ({
         field: { onChange, onBlur, value, ref },
         fieldState: { error },
       }) => (
-        <RadioGroup
+        <MantineRadioGroup
           {...props}
           ref={ref}
           label={label}
@@ -33,7 +37,7 @@ const RadioGroupInput: FC<InputRadioGroupProps> = ({
           >
             {options.map((option, i) => {
               return (
-                <Radio
+                <MantineRadio
                   key={i}
                   error={error?.message}
                   value={option.value}
@@ -42,10 +46,10 @@ const RadioGroupInput: FC<InputRadioGroupProps> = ({
               );
             })}
           </Group>
-        </RadioGroup>
+        </MantineRadioGroup>
       )}
     />
   );
 };
 
-export default RadioGroupInput;
+export default RadioGroup;

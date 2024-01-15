@@ -1,17 +1,10 @@
 import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
-import { Textarea } from "@mantine/core";
-import { InputTextAreaProps } from "@r3dm4st3r/react-hook-form/types/index.type";
+import { Checkbox as MantineCheckbox } from "@mantine/core";
+import { CheckboxProps } from "@r3dm4st3r/react-hook-form/types";
 
-const InputTextArea: React.FC<InputTextAreaProps> = ({
-  name,
-  placeholder,
-  label,
-  props,
-  disabled,
-}) => {
+const Checkbox: React.FC<CheckboxProps> = ({ name, label, props }) => {
   const { control } = useFormContext();
-
   return (
     <Controller
       control={control}
@@ -20,17 +13,14 @@ const InputTextArea: React.FC<InputTextAreaProps> = ({
         field: { onChange, onBlur, value, ref },
         fieldState: { error },
       }) => (
-        <Textarea
+        <MantineCheckbox
           ref={ref}
-          label={label}
           onBlur={onBlur}
-          value={value}
-          disabled={disabled}
+          label={label}
+          checked={value}
           onChange={(newValue) => {
             onChange(newValue);
           }}
-          autosize
-          placeholder={placeholder ? placeholder : `Enter ${label}`}
           error={error?.message}
           {...props}
         />
@@ -39,4 +29,4 @@ const InputTextArea: React.FC<InputTextAreaProps> = ({
   );
 };
 
-export default InputTextArea;
+export default Checkbox;

@@ -1,6 +1,6 @@
 {
   "name": "@r3dm4st3r/react-hook-form",
-  "description": "A ready made utility with Mantine UI to rapidly build the forms on top of popular form library React Hook Form",
+  "description": "A comprehensive collection of React hook form elements thoughtfully designed with Mantine UI components, seamlessly integrated through a context provider for an enhanced development experience.",
   "author": {
     "name": "r3dm4st3r",
     "email": "prafullaranjanweb@gmail.com"
@@ -11,6 +11,6 @@
     "react": "^18",
     "react-hook-form": "^7"
   },
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT"
 }

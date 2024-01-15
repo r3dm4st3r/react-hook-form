@@ -1,41 +1,33 @@
-import { default as InputText } from "./src/components/InputText";
-import { default as InputTextArea } from "./src/components/InputTextArea";
-import { default as InputCheckbox } from "./src/components/InputCheckbox";
-import { default as InputPassword } from "./src/components/InputPassword";
-import { default as InputSelect } from "./src/components/InputSelect";
-import { default as InputRadioGroup } from "./src/components/InputRadioGroup";
-import { default as InputSwitch } from "./src/components/InputSwitch";
+import { default as Input } from "@r3dm4st3r/react-hook-form/elements/input/Input";
+import { default as TextArea } from "@r3dm4st3r/react-hook-form/elements/textarea/TextArea";
+import { default as Checkbox } from "@r3dm4st3r/react-hook-form/elements/checkbox/Checkbox";
+import { default as Password } from "@r3dm4st3r/react-hook-form/elements/password/Password";
+import { default as Select } from "@r3dm4st3r/react-hook-form/elements/select/Select";
+import { default as RadioGroup } from "@r3dm4st3r/react-hook-form/elements/radio/RadioGroup";
+import { default as Switch } from "@r3dm4st3r/react-hook-form/elements/switch/Switch";
 
 import {
+  CheckboxProps,
   ILabelValue,
-  InputCheckboxProps,
-  InputPasswordProps,
-  InputRadioGroupProps,
-  InputSelectProps,
-  InputSwitchProps,
-  InputTextAreaProps,
-  InputTextProps,
-} from "./src/types/index.type";
+  PasswordProps,
+  RadioGroupProps,
+  SelectProps,
+  SwitchProps,
+  TextAreaProps,
+  TextProps,
+} from "@r3dm4st3r/react-hook-form/types";
 
 // Component Exports
-export {
-  InputText,
-  InputTextArea,
-  InputPassword,
-  InputCheckbox,
-  InputRadioGroup,
-  InputSelect,
-  InputSwitch,
-};
+export { Input, TextArea, Password, Checkbox, RadioGroup, Select, Switch };
 
 // Type exports
 export type {
-  InputTextProps,
-  InputSwitchProps,
-  InputSelectProps,
-  InputTextAreaProps,
-  InputPasswordProps,
-  InputCheckboxProps,
-  InputRadioGroupProps,
+  TextProps,
+  SwitchProps,
+  SelectProps,
+  TextAreaProps,
+  PasswordProps,
+  CheckboxProps,
+  RadioGroupProps,
   ILabelValue,
 };

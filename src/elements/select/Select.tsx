@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import { Controller, useFormContext } from "react-hook-form";
-import { Select } from "@mantine/core";
-import { InputSelectProps } from "@r3dm4st3r/react-hook-form/types/index.type";
+import { Select as MantineSelect } from "@mantine/core";
+import { SelectProps } from "@r3dm4st3r/react-hook-form/types";
 
-const InputSelect: FC<InputSelectProps> = ({ label, name, data, props }) => {
+const Select: FC<SelectProps> = ({ label, name, data, props }) => {
   const { control } = useFormContext();
 
   return (
@@ -11,7 +11,7 @@ const InputSelect: FC<InputSelectProps> = ({ label, name, data, props }) => {
       control={control}
       name={name}
       render={({ field: { onChange, value, ref }, fieldState: { error } }) => (
-        <Select
+        <MantineSelect
           ref={ref}
           label={label}
           data={data}
@@ -30,4 +30,4 @@ const InputSelect: FC<InputSelectProps> = ({ label, name, data, props }) => {
   );
 };
 
-export default InputSelect;
+export default Select;

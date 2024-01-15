@@ -1,9 +1,9 @@
 import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
-import { Switch } from "@mantine/core";
-import { InputSwitchProps } from "@r3dm4st3r/react-hook-form/types/index.type";
+import { Switch as MantineSwitch } from "@mantine/core";
+import { SwitchProps } from "@r3dm4st3r/react-hook-form/types";
 
-const InputSwitch: React.FC<InputSwitchProps> = ({ name, label, props }) => {
+const Switch: React.FC<SwitchProps> = ({ name, label, props }) => {
   const { control } = useFormContext();
   return (
     <Controller
@@ -13,7 +13,7 @@ const InputSwitch: React.FC<InputSwitchProps> = ({ name, label, props }) => {
         field: { onChange, onBlur, value, ref },
         fieldState: { error },
       }) => (
-        <Switch
+        <MantineSwitch
           ref={ref}
           onBlur={onBlur}
           label={label}
@@ -29,4 +29,4 @@ const InputSwitch: React.FC<InputSwitchProps> = ({ name, label, props }) => {
   );
 };
 
-export default InputSwitch;
+export default Switch;
