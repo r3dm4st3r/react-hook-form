@@ -34,6 +34,8 @@
     "noUncheckedIndexedAccess": true,
     "allowUnreachableCode": false,
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "index.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx",
+    "src/index.d.ts"
+  ],
   "exclude": ["node_modules"]
 }

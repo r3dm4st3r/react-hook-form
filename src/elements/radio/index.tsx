@@ -7,12 +7,7 @@ import {
 } from "@mantine/core";
 import { RadioGroupProps } from "../../types";
 
-const RadioGroup: FC<RadioGroupProps> = ({
-  name,
-  label = "",
-  props,
-  options,
-}) => {
+const Radio: FC<RadioGroupProps> = ({ name, label = "", props, options }) => {
   const { control } = useFormContext();
 
   return (
@@ -52,4 +47,4 @@ const RadioGroup: FC<RadioGroupProps> = ({
   );
 };
 
-export default RadioGroup;
+export default Radio;
