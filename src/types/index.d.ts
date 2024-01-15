@@ -12,7 +12,7 @@ interface IBaseForm {
   name: string;
   label?: string;
 }
-interface TextProps extends IBaseForm {
+interface InputProps extends IBaseForm {
   props?: Partial<TextInputProps>;
 }
 
@@ -52,7 +52,7 @@ interface CheckboxProps extends IBaseForm {
 export {
   IBaseForm,
   ILabelValue,
-  TextProps,
+  InputProps,
   PasswordProps,
   TextAreaProps,
   CheckboxProps,

@@ -1,7 +1,7 @@
 import React, { FC, useRef } from "react";
 import { PasswordInput } from "@mantine/core";
 import { Controller, useFormContext } from "react-hook-form";
-import { PasswordProps } from "../../types/types";
+import { PasswordProps } from "../../types";
 
 const Password: FC<PasswordProps> = ({ name, label, props }) => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -36,4 +36,4 @@ const Password: FC<PasswordProps> = ({ name, label, props }) => {
   );
 };
 
-export { Password };
+export default Password;

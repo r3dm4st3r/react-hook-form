@@ -1,6 +1,6 @@
 {
   "name": "@r3dm4st3r/react-hook-form",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A comprehensive collection of React hook form elements thoughtfully designed with Mantine UI components, seamlessly integrated through a context provider for an enhanced development experience.",
   "author": "r3dm4st3r<prafullaranjanweb@gmail.com>",
   "license": "MIT",
@@ -11,18 +11,17 @@
     "mantine ui",
     "react"
   ],
-  "main": "src/index.d.ts",
-  "module": "src/index.d.ts",
-  "types": "src/index.d.ts",
+  "main": "src/elements/index.d.ts",
+  "module": "src/elements/index.d.ts",
   "exports": {
     ".": {
       "import": {
-        "types": "./src/index.d.ts",
-        "default": "./src/index.d.ts"
+        "types": "./src/elements/index.d.ts",
+        "default": "./src/elements/index.d.ts"
       },
       "require": {
-        "types": "./src/index.d.ts",
-        "default": "./src/index.d.ts"
+        "types": "./src/elements/index.d.ts",
+        "default": "./src/elements/index.d.ts"
       }
     }
   },

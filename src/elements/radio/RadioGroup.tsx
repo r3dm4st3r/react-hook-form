@@ -5,7 +5,7 @@ import {
   Radio as MantineRadio,
   RadioGroup as MantineRadioGroup,
 } from "@mantine/core";
-import { RadioGroupProps } from "../../types/types";
+import { RadioGroupProps } from "../../types";
 
 const RadioGroup: FC<RadioGroupProps> = ({
   name,
@@ -52,4 +52,4 @@ const RadioGroup: FC<RadioGroupProps> = ({
   );
 };
 
-export { RadioGroup };
+export default RadioGroup;

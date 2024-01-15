@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import { TextInput } from "@mantine/core";
 import { Controller, useFormContext } from "react-hook-form";
-import { TextProps } from "../../types/types";
+import { InputProps } from "../../types";
 
-const Input: FC<TextProps> = ({ name, label, props }) => {
+const Input: FC<InputProps> = ({ name, label, props }) => {
   const { control } = useFormContext();
 
   return (
@@ -34,4 +34,4 @@ const Input: FC<TextProps> = ({ name, label, props }) => {
   );
 };
 
-export { Input };
+export default Input;
