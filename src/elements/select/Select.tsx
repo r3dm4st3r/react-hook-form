@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Select as MantineSelect } from "@mantine/core";
-import { SelectProps } from "../../types";
+import { SelectProps } from "../../types/types";
 
 const Select: FC<SelectProps> = ({ label, name, data, props }) => {
   const { control } = useFormContext();
@@ -30,4 +30,4 @@ const Select: FC<SelectProps> = ({ label, name, data, props }) => {
   );
 };
 
-export default Select;
+export { Select };

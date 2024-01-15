@@ -1,7 +1,7 @@
 import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Textarea as MantineTextarea } from "@mantine/core";
-import { TextAreaProps } from "../../types";
+import { TextAreaProps } from "../../types/types";
 
 const Textarea: React.FC<TextAreaProps> = ({
   name,
@@ -39,4 +39,4 @@ const Textarea: React.FC<TextAreaProps> = ({
   );
 };
 
-export default Textarea;
+export { Textarea };

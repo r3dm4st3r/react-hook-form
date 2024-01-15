@@ -1,7 +1,7 @@
 import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Switch as MantineSwitch } from "@mantine/core";
-import { SwitchProps } from "../../types";
+import { SwitchProps } from "../../types/types";
 
 const Switch: React.FC<SwitchProps> = ({ name, label, props }) => {
   const { control } = useFormContext();
@@ -29,4 +29,4 @@ const Switch: React.FC<SwitchProps> = ({ name, label, props }) => {
   );
 };
 
-export default Switch;
+export { Switch };

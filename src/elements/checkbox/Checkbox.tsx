@@ -1,7 +1,7 @@
 import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Checkbox as MantineCheckbox } from "@mantine/core";
-import { CheckboxProps } from "../../types";
+import { CheckboxProps } from "../../types/types";
 
 const Checkbox: React.FC<CheckboxProps> = ({ name, label, props }) => {
   const { control } = useFormContext();
@@ -29,4 +29,4 @@ const Checkbox: React.FC<CheckboxProps> = ({ name, label, props }) => {
   );
 };
 
-export default Checkbox;
+export { Checkbox };

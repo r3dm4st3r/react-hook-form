@@ -8,43 +8,55 @@ import {
   TextInputProps,
 } from "@mantine/core";
 
-export interface IBaseForm {
+interface IBaseForm {
   name: string;
   label?: string;
 }
-export interface TextProps extends IBaseForm {
+interface TextProps extends IBaseForm {
   props?: Partial<TextInputProps>;
 }
 
-export interface PasswordProps extends IBaseForm {
+interface PasswordProps extends IBaseForm {
   props?: Partial<PasswordInputProps>;
 }
 
-export interface SwitchProps extends IBaseForm {
+interface SwitchProps extends IBaseForm {
   props?: Partial<MantineSwitchProps>;
 }
 
-export interface TextAreaProps extends IBaseForm {
+interface TextAreaProps extends IBaseForm {
   props?: Partial<MantineTextareaProps>;
   placeholder?: string;
   disabled?: boolean;
 }
 
-export interface ILabelValue {
+interface ILabelValue {
   label: string;
   value: string;
 }
 
-export interface RadioGroupProps extends IBaseForm {
+interface RadioGroupProps extends IBaseForm {
   props?: Partial<MantineRadioGroupProps>;
   options: ILabelValue[];
 }
 
-export interface SelectProps extends IBaseForm {
+interface SelectProps extends IBaseForm {
   data?: ILabelValue[];
   props?: Partial<MantineSelectProps>;
 }
 
-export interface CheckboxProps extends IBaseForm {
+interface CheckboxProps extends IBaseForm {
   props?: Partial<MantineCheckboxProps>;
 }
+
+export {
+  IBaseForm,
+  ILabelValue,
+  TextProps,
+  PasswordProps,
+  TextAreaProps,
+  CheckboxProps,
+  RadioGroupProps,
+  SelectProps,
+  SwitchProps,
+};
