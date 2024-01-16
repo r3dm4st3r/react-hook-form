@@ -44,6 +44,10 @@ function App() {
 - Radio
 - Textarea
 - Checkbox
+- Chip
+- ChipGroup
+- ColorPicker
+- ColorInput
 
 And many more is about to add...
 

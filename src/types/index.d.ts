@@ -1,5 +1,9 @@
 import {
   CheckboxProps as MantineCheckboxProps,
+  ChipGroupProps,
+  ChipProps,
+  ColorInputProps,
+  ColorPickerProps,
   PasswordInputProps,
   RadioGroupProps as MantineRadioGroupProps,
   SelectProps as MantineSelectProps,
@@ -47,4 +51,23 @@ interface SelectProps extends IBaseForm {
 
 interface CheckboxProps extends IBaseForm {
   props?: Partial<MantineCheckboxProps>;
+}
+
+export interface IChip extends IBaseForm {
+  props?: Partial<ChipProps>;
+}
+
+interface IChipGroup<T extends boolean> extends Omit<IBaseForm, "label"> {
+  data: { label: string; value: string | number }[];
+  multiple?: boolean;
+  inline?: boolean;
+  props?: Partial<ChipGroupProps<T>>;
+}
+
+export interface IColorInput extends IBaseForm {
+  props?: Partial<ColorInputProps>;
+}
+
+export interface IColorPicker extends Omit<IBaseForm, "label"> {
+  props?: Partial<ColorPickerProps>;
 }
