@@ -12,12 +12,12 @@ export { default as ColorPicker } from "./elements/color/ColorPicker";
 
 export type {
   InputProps,
-  CheckboxProps,
-  RadioGroupProps,
-  SwitchProps,
-  TextAreaProps,
-  PasswordProps,
-  SelectProps,
+  ICheckbox,
+  IRadioGroup,
+  ISwitch,
+  ITextArea,
+  IPassword,
+  ISelect,
   IBaseForm,
   ILabelValue,
   IChip,

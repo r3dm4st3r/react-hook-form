@@ -5,14 +5,9 @@ import {
   Radio as MantineRadio,
   RadioGroup as MantineRadioGroup,
 } from "@mantine/core";
-import { RadioGroupProps } from "../../types";
+import { IRadioGroup } from "../../types";
 
-const RadioGroup: FC<RadioGroupProps> = ({
-  name,
-  label = "",
-  props,
-  options,
-}) => {
+const RadioGroup: FC<IRadioGroup> = ({ name, label = "", props, options }) => {
   const { control } = useFormContext();
 
   return (

@@ -1,9 +1,9 @@
 import React from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Checkbox as MantineCheckbox } from "@mantine/core";
-import { CheckboxProps } from "../../types";
+import { ICheckbox } from "../../types";
 
-const Checkbox: React.FC<CheckboxProps> = ({ name, label, props }) => {
+const Checkbox: React.FC<ICheckbox> = ({ name, label, props }) => {
   const { control } = useFormContext();
   return (
     <Controller
