@@ -6,14 +6,23 @@ import {
   ColorPickerProps,
   FileInputProps,
   JsonInputProps,
-  NativeSelectProps as MantineNativeSelectProps,
+  NativeSelectProps,
+  NumberInputProps,
   PasswordInputProps,
-  RadioGroupProps as MantineRadioGroupProps,
-  SelectProps as MantineSelectProps,
-  SwitchProps as MantineSwitchProps,
-  TextareaProps as MantineTextareaProps,
+  PinInputProps,
+  RadioGroupProps,
+  RangeSliderProps,
+  RatingProps,
+  SegmentedControlProps,
+  SelectProps,
+  SliderProps,
+  SwitchGroupProps,
+  SwitchProps,
+  TextareaProps,
   TextInputProps,
+  TextProps,
 } from "@mantine/core";
+import { ReactNode } from "react";
 
 interface IBaseForm {
   name: string;
@@ -28,11 +37,17 @@ interface IPassword extends IBaseForm {
 }
 
 interface ISwitch extends IBaseForm {
-  props?: Partial<MantineSwitchProps>;
+  props?: Partial<SwitchProps>;
+}
+
+interface ISwitchGroup extends IBaseForm {
+  data: { label: string; value: string }[];
+  inline?: boolean;
+  props?: Partial<SwitchGroupProps>;
 }
 
 interface ITextArea extends IBaseForm {
-  props?: Partial<MantineTextareaProps>;
+  props?: Partial<TextareaProps>;
   placeholder?: string;
   disabled?: boolean;
 }
@@ -43,18 +58,18 @@ interface ILabelValue {
 }
 
 interface IRadioGroup extends IBaseForm {
-  props?: Partial<MantineRadioGroupProps>;
+  props?: Partial<RadioGroupProps>;
   options: ILabelValue[];
 }
 
 interface ISelect extends IBaseForm {
   data?: ILabelValue[];
-  props?: Partial<MantineSelectProps>;
+  props?: Partial<SelectProps>;
 }
 
 interface INativeSelect extends IBaseForm {
   data?: ILabelValue[];
-  props?: Partial<MantineNativeSelectProps>;
+  props?: Partial<NativeSelectProps>;
 }
 
 interface ICheckbox extends IBaseForm {
@@ -85,4 +100,34 @@ export interface IFileInput<T extends boolean> extends IBaseForm {
 
 export interface IJsonInput extends IBaseForm {
   props?: Partial<JsonInputProps>;
+}
+
+export interface INumberInput extends IBaseForm {
+  props?: Partial<NumberInputProps>;
+}
+
+export interface IPinInput extends IBaseForm {
+  labelProps?: Partial<TextProps>;
+  props?: Partial<PinInputProps>;
+}
+
+export interface IRating extends IBaseForm {
+  labelProps?: Partial<TextProps>;
+  props?: Partial<RatingProps>;
+}
+
+interface ISegmentedControl extends Omit<IBaseForm, "label"> {
+  data: { label: string | ReactNode; value: string }[];
+  props?: Partial<SegmentedControlProps>;
+}
+
+interface ISlider extends IBaseForm {
+  data: { value: number }[];
+  labelProps?: Partial<TextProps>;
+  props?: Partial<SliderProps>;
+}
+
+interface IRangeSlider extends IBaseForm {
+  data: { label: string; value: number }[];
+  props?: Partial<RangeSliderProps>;
 }

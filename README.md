@@ -7,7 +7,7 @@
 import { Button } from '@mantine/core';
 import { FormProvider, useForm } from 'react-hook-form';
 
-import { Input, Password } from '@r3dm4st3r/react-hook-form';
+import { Input, PasswordInput } from '@r3dm4st3r/react-hook-form';
 
 function App() {
 
@@ -27,7 +27,7 @@ function App() {
         <FormProvider {...methods}>
             <form onSubmit={methods.handleSubmit(handleFormSubmit)}>
                 <Input name="username" label="Username" props={{size: 'lg'}} />
-                <Password name="password" label="Password" props={{size: 'lg'}} />
+                <PasswordInput name="password" label="PasswordInput" props={{size: 'lg'}} />
                 <Button type="submit" size="lg">Submit</Button>
             </form>
         </FormProvider>
