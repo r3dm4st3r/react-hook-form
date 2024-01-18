@@ -19,6 +19,10 @@ export { default as RangeSlider } from "./elements/slider/RangeSlider";
 export { default as Switch } from "./elements/switch/Switch";
 export { default as SwitchGroup } from "./elements/switch/SwitchGroup";
 export { default as Textarea } from "./elements/textarea/Textarea";
+export { default as DateInput } from "./elements/dates/DateInput";
+export { default as DatePickerInput } from "./elements/dates/DatePickerInput";
+export { default as DatePicker } from "./elements/dates/DatePicker";
+export { default as DateTimePicker } from "./elements/dates/DateTimePicker";
 
 export type {
   IBaseForm,
@@ -44,4 +48,8 @@ export type {
   ISwitchGroup,
   ITextArea,
   ISelect,
+  IDateInput,
+  IDateTimePicker,
+  IDatePicker,
+  IDatePickerInput,
 } from "./types";
