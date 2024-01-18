@@ -23,6 +23,12 @@ import {
   TextProps,
 } from "@mantine/core";
 import { ReactNode } from "react";
+import {
+  DateInputProps,
+  DatePickerInputProps,
+  DatePickerProps,
+  DateTimePickerProps,
+} from "@mantine/dates";
 
 interface IBaseForm {
   name: string;
@@ -130,4 +136,22 @@ interface ISlider extends IBaseForm {
 interface IRangeSlider extends IBaseForm {
   data: { label: string; value: number }[];
   props?: Partial<RangeSliderProps>;
+}
+
+interface IDateInput extends IBaseForm {
+  props?: Partial<DateInputProps>;
+}
+
+interface IDateTimePicker extends IBaseForm {
+  props?: Partial<DateTimePickerProps>;
+}
+
+interface IDatePicker<T extends DatePickerProps["type"]>
+  extends Omit<IBaseForm, "label"> {
+  props?: Partial<DatePickerProps<T>>;
+}
+
+interface IDatePickerInput<T extends DatePickerInputProps["type"]>
+  extends IBaseForm {
+  props?: Partial<DatePickerInputProps<T>>;
 }
