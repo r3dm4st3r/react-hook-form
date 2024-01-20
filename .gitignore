@@ -6,4 +6,4 @@ package-lock.json
 .env.*
 .github
 tsconfig.tsbuildinfo
-r3dm4st3r-*
+*.tgz
