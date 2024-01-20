@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import { Controller, useFormContext } from "react-hook-form";
 import { DateInput as MantineDateInput } from "@mantine/dates";
+import { Controller, useFormContext } from "react-hook-form";
 import { IDateInput } from "../../types";
 
 const DateInput: FC<IDateInput> = ({ name, label, props }) => {
@@ -23,7 +23,7 @@ const DateInput: FC<IDateInput> = ({ name, label, props }) => {
             }
             error={error?.message}
             onBlur={onBlur}
-            value={value}
+            value={value ? new Date(value) : null}
             onChange={(newValue) => onChange(newValue)}
             autoComplete="off"
             {...props}
