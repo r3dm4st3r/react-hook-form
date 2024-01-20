@@ -19,6 +19,9 @@ const NumberInput: FC<INumberInput> = ({ name, label, props }) => {
             value={value}
             label={label}
             onBlur={onBlur}
+            placeholder={
+              props?.placeholder ? props?.placeholder : `Enter ${label}`
+            }
             error={error?.message}
             onChange={(newValue) => onChange(newValue)}
             {...props}
