@@ -10,13 +10,14 @@ const MultiSelect: FC<IMultiSelect> = ({ label, name, data, props }) => {
     <Controller
       control={control}
       name={name}
-      render={({ field: { onChange, value, ref }, fieldState: { error } }) => {
+      render={({
+        field: { onChange, onBlur, value, ref },
+        fieldState: { error },
+      }) => {
         return (
           <MantineMultiSelect
             ref={ref}
             label={label}
-            data={data}
-            value={value ?? []}
             placeholder={
               props?.placeholder
                 ? props?.placeholder
@@ -24,8 +25,12 @@ const MultiSelect: FC<IMultiSelect> = ({ label, name, data, props }) => {
                   ? `Select ${label}`
                   : "Select"
             }
-            onChange={(newValue) => onChange(newValue)}
             error={error?.message}
+            onBlur={onBlur}
+            value={value}
+            data={data}
+            hidePickedOptions
+            onChange={(newValue) => onChange(newValue)}
             {...props}
           />
         );
