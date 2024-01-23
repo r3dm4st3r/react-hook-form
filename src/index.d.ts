@@ -13,6 +13,7 @@ export { default as RadioGroup } from "./elements/radio/RadioGroup";
 export { default as Rating } from "./elements/rating/Rating";
 export { default as SegmentedControl } from "./elements/segment/SegmentedControl";
 export { default as Select } from "./elements/select/Select";
+export { default as MultiSelect } from "./elements/select/MultiSelect";
 export { default as NativeSelect } from "./elements/select/NativeSelect";
 export { default as Slider } from "./elements/slider/Slider";
 export { default as RangeSlider } from "./elements/slider/RangeSlider";
@@ -33,8 +34,6 @@ export type {
   IColorPicker,
   IFileInput,
   IJsonInput,
-  ILabelValue,
-  INativeSelect,
   INumberInput,
   InputProps,
   IPassword,
@@ -48,6 +47,8 @@ export type {
   ISwitchGroup,
   ITextArea,
   ISelect,
+  INativeSelect,
+  IMultiSelect,
   IDateInput,
   IDateTimePicker,
   IDatePicker,

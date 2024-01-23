@@ -20,6 +20,9 @@ const FileInput: FC<IFileInput<boolean>> = ({ name, label, props }) => {
             label={label}
             onBlur={onBlur}
             error={error?.message}
+            placeholder={
+              props?.placeholder ? props?.placeholder : `Upload ${label}`
+            }
             onChange={(newValue) => onChange(newValue)}
             {...props}
           />

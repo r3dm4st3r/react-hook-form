@@ -4,8 +4,10 @@ import {
   ChipProps,
   ColorInputProps,
   ColorPickerProps,
+  ComboboxData,
   FileInputProps,
   JsonInputProps,
+  MultiSelectProps,
   NativeSelectProps,
   NumberInputProps,
   PasswordInputProps,
@@ -58,23 +60,23 @@ interface ITextArea extends IBaseForm {
   disabled?: boolean;
 }
 
-interface ILabelValue {
-  label: string;
-  value: string;
-}
-
 interface IRadioGroup extends IBaseForm {
   props?: Partial<RadioGroupProps>;
-  options: ILabelValue[];
+  options: ComboboxData;
 }
 
 interface ISelect extends IBaseForm {
-  data?: ILabelValue[];
+  data?: ComboboxData;
   props?: Partial<SelectProps>;
 }
 
+interface IMultiSelect extends IBaseForm {
+  data?: ComboboxData;
+  props?: Partial<MultiSelectProps>;
+}
+
 interface INativeSelect extends IBaseForm {
-  data?: ILabelValue[];
+  data?: ComboboxData;
   props?: Partial<NativeSelectProps>;
 }
 
