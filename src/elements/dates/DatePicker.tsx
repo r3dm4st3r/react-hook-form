@@ -21,7 +21,7 @@ const DatePicker: FC<IDatePicker<DatePickerProps["type"]>> = ({
           <MantineDatePicker
             ref={ref}
             onBlur={onBlur}
-            value={value}
+            value={value ? new Date(value) : null}
             onChange={(val) => onChange(val)}
             {...props}
           />

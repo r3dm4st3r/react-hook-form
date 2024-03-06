@@ -30,7 +30,7 @@ const DatePickerInput: FC<IDatePickerInput<DatePickerInputProps["type"]>> = ({
             }
             error={error?.message}
             onBlur={onBlur}
-            value={value}
+            value={value ? new Date(value) : null}
             onChange={(newValue) => onChange(newValue)}
             {...props}
           />
